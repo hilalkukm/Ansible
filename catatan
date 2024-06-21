@@ -1,0 +1,9 @@
+21/06/2024
+
+- Pelajari lagi inventory file format YAML
+- Tambahkan var untuk semua host mulai dari :
+  * ssh port
+  * ssh username
+- Testing apakah user bisa change password dirinya sendiri
+- Pelajari lagi change (update) password ke semua managed host
+- Otomasi autentikasi ssh menggunakan private key di server
