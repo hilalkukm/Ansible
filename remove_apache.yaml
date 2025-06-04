@@ -1,0 +1,10 @@
+---
+- name: Test remove apache
+  hosts: web
+  become: yes  # Use sudo for the tasks
+  tasks:
+    - name: Remove Apache
+      apt:
+        name:
+          - apache2
+        state: absent
