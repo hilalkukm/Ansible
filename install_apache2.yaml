@@ -1,0 +1,10 @@
+---
+- name: Install Apache
+  hosts: web
+  become: yes  # Use sudo for the tasks
+  tasks:
+    - name: Install
+      apt:
+        name:
+          - apache2
+        state: present
