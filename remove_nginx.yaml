@@ -6,7 +6,7 @@
     - name: Remove Nginx
       apt:
         name:
-          - Nginx
+          - nginx
         state: absent
         purge: yes
         autoremove: yes
