@@ -1,0 +1,12 @@
+---
+- name: Remove nginx
+  hosts: web
+  become: yes  # Use sudo for the tasks
+  tasks:
+    - name: Remove Nginx
+      apt:
+        name:
+          - Nginx
+        state: absent
+        purge: yes
+        autoremove: yes
