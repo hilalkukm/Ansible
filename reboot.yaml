@@ -1,0 +1,8 @@
+---
+- name: Reboot Server
+  hosts: web
+  become: yes  # Use sudo for the tasks
+  tasks:
+    - name: Reboot server
+      reboot:
+        rebot_timeout: 300
