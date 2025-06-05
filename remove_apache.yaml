@@ -4,8 +4,4 @@
   become: yes  # Use sudo for the tasks
   tasks:
     - name: Remove Apache
-      apt:
-        name:
-          - apache2
-        state: absent
-        autoremove: yes
+      command: dpkg --purge apache2
