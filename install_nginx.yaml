@@ -3,7 +3,13 @@
   hosts: web
   become: yes  # Use sudo for the tasks
   tasks:
-    - name: Install
+    - name: Update repositories
+      apt:
+        update_cache: yes
+        force_apt_get: yes 
+        cache_valid_time: 3600
+        
+    - name: Install Nginx
       apt:
         name:
           - nginx
