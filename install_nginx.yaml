@@ -1,7 +1,7 @@
 ---
-- name: Install Apache
+- name: Install Nginx
   hosts: web
-  become: yes  # Use sudo for the tasks
+  become: yes
   tasks:
     - name: Update repositories
       apt:
