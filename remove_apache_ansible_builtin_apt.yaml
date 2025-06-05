@@ -1,0 +1,13 @@
+---
+- name: Remove Apache2
+  hosts: web
+  become: yes
+  tasks:
+    - name: Update repository index
+      ansible.builtin.apt: 
+        update_cache: yes
+        
+    - name: Remove Apache
+      ansible.builtin.apt:
+        name: apache2
+        state: absent
