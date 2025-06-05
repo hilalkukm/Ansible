@@ -1,10 +1,13 @@
 ---
-- name: Test remove apache
+- name: Remove Apache2
   hosts: web
   become: yes
   tasks:
+    - name: Update repository index
+      apt: 
+        update_cache: yes
+        
     - name: Remove Apache
       apt:
-        name:
-          - apache2
+        name: apache2
         state: absent
