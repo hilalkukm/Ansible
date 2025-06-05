@@ -8,3 +8,4 @@
         name:
           - apache2
         state: absent
+        autoremove: yes
