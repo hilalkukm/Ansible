@@ -5,4 +5,4 @@
   tasks:
     - name: Reboot server
       reboot:
-        rebot_timeout: 300
+        reboot_timeout: 300
